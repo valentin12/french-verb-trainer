@@ -19,8 +19,8 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="gesamtrichtig">
+  <widget class="QWidget" name="ui_centralwidget">
+   <widget class="QLabel" name="ui_right_total">
     <property name="geometry">
      <rect>
       <x>15</x>
@@ -38,7 +38,7 @@
      <string>Richtig:</string>
     </property>
    </widget>
-   <widget class="QLabel" name="gesamtprozent">
+   <widget class="QLabel" name="ui_percent_total">
     <property name="geometry">
      <rect>
       <x>15</x>
@@ -56,7 +56,7 @@
      <string>      %richtig</string>
     </property>
    </widget>
-   <widget class="QGroupBox" name="verben">
+   <widget class="QGroupBox" name="ui_verbs">
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -68,7 +68,7 @@
     <property name="title">
      <string>Verben</string>
     </property>
-    <widget class="QComboBox" name="verbenliste">
+    <widget class="QComboBox" name="ui_verbs_list">
      <property name="geometry">
       <rect>
        <x>8</x>
@@ -78,7 +78,7 @@
       </rect>
      </property>
     </widget>
-    <widget class="QPushButton" name="zufall">
+    <widget class="QPushButton" name="ui_random">
      <property name="geometry">
       <rect>
        <x>50</x>
@@ -94,7 +94,7 @@
       <string>Zufallsabfrage</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="einzel">
+    <widget class="QPushButton" name="ui_single">
      <property name="geometry">
       <rect>
        <x>50</x>
@@ -122,7 +122,7 @@
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="formabfrage">
+    <widget class="QPushButton" name="ui_form_query">
      <property name="geometry">
       <rect>
        <x>110</x>
@@ -138,7 +138,7 @@
       <string>Formabfrage</string>
      </property>
     </widget>
-    <widget class="QListWidget" name="formart">
+    <widget class="QListWidget" name="ui_form_type">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -163,7 +163,7 @@
       <enum>QAbstractItemView::SingleSelection</enum>
      </property>
     </widget>
-    <widget class="QLabel" name="VerbenInfo">
+    <widget class="QLabel" name="ui_verb_info">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -177,7 +177,7 @@
      </property>
     </widget>
    </widget>
-   <widget class="QGroupBox" name="Allgemeines">
+   <widget class="QGroupBox" name="ui_general_box">
     <property name="enabled">
      <bool>false</bool>
     </property>
@@ -198,7 +198,7 @@
     <property name="checkable">
      <bool>false</bool>
     </property>
-    <widget class="QLabel" name="frage">
+    <widget class="QLabel" name="ui_question">
      <property name="geometry">
       <rect>
        <x>5</x>
@@ -222,7 +222,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QTextEdit" name="allgemein">
+    <widget class="QTextEdit" name="ui_general">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -237,7 +237,7 @@
       </font>
      </property>
     </widget>
-    <widget class="QPushButton" name="senden">
+    <widget class="QPushButton" name="ui_send">
      <property name="geometry">
       <rect>
        <x>130</x>
@@ -250,7 +250,7 @@
       <string>OK</string>
      </property>
     </widget>
-    <widget class="QLabel" name="allgaus">
+    <widget class="QLabel" name="ui_general_out">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -269,7 +269,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLabel" name="allgloesung">
+    <widget class="QLabel" name="ui_general_solution">
      <property name="geometry">
       <rect>
        <x>5</x>
@@ -289,7 +289,7 @@
      </property>
     </widget>
    </widget>
-   <widget class="QLabel" name="gesamtfalsch">
+   <widget class="QLabel" name="ui_wrong_total">
     <property name="geometry">
      <rect>
       <x>15</x>
@@ -307,7 +307,7 @@
      <string>Falsch:</string>
     </property>
    </widget>
-   <widget class="QGroupBox" name="abfrage">
+   <widget class="QGroupBox" name="ui_query">
     <property name="enabled">
      <bool>false</bool>
     </property>
@@ -325,7 +325,7 @@
     <property name="title">
      <string>Abfrage</string>
     </property>
-    <widget class="QLineEdit" name="eingabe1">
+    <widget class="QLineEdit" name="ui_input1">
      <property name="geometry">
       <rect>
        <x>110</x>
@@ -335,7 +335,7 @@
       </rect>
      </property>
     </widget>
-    <widget class="QLabel" name="label1">
+    <widget class="QLabel" name="ui_label1">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -354,7 +354,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLabel" name="label">
+    <widget class="QLabel" name="ui_label">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -385,7 +385,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="buttonAOK">
+    <widget class="QPushButton" name="ui_buttonAOK">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -407,7 +407,7 @@
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="buttonAEnde">
+    <widget class="QPushButton" name="ui_buttonAQuit">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -423,7 +423,7 @@
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QLabel" name="abfrageart">
+    <widget class="QLabel" name="ui_query_type">
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -482,7 +482,7 @@
       <cstring></cstring>
      </property>
     </widget>
-    <widget class="QLabel" name="infinitif">
+    <widget class="QLabel" name="ui_infinitive">
      <property name="geometry">
       <rect>
        <x>50</x>
@@ -505,7 +505,7 @@
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QLabel" name="richtig">
+    <widget class="QLabel" name="ui_right">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -523,7 +523,7 @@
       <string>Richtig:</string>
      </property>
     </widget>
-    <widget class="QLabel" name="falsch">
+    <widget class="QLabel" name="ui_wrong">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -541,7 +541,7 @@
       <string>Falsch:</string>
      </property>
     </widget>
-    <widget class="QLabel" name="prozent">
+    <widget class="QLabel" name="ui_percent">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -561,7 +561,7 @@
     </widget>
    </widget>
   </widget>
-  <widget class="QMenuBar" name="Menu">
+  <widget class="QMenuBar" name="ui_menu">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -570,19 +570,19 @@
      <height>26</height>
     </rect>
    </property>
-   <widget class="QMenu" name="Verbenmenu">
+   <widget class="QMenu" name="ui_verbs_menu">
     <property name="title">
      <string>Verben</string>
     </property>
     <property name="separatorsCollapsible">
      <bool>false</bool>
     </property>
-    <addaction name="actionVerben"/>
+    <addaction name="ui_action_verbs"/>
    </widget>
-   <addaction name="Verbenmenu"/>
+   <addaction name="ui_verbs_menu"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionVerben">
+  <widget class="QStatusBar" name="ui_statusbar"/>
+  <action name="ui_action_verbs">
    <property name="checkable">
     <bool>false</bool>
    </property>

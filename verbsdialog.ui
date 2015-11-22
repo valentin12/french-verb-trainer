@@ -34,7 +34,7 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QLabel" name="verben">
+  <widget class="QLabel" name="ui_verbs">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -59,7 +59,7 @@
     <string>Verben</string>
    </property>
   </widget>
-  <widget class="QTabWidget" name="VerbenTab">
+  <widget class="QTabWidget" name="ui_verbs_tab">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -71,7 +71,7 @@
    <property name="currentIndex">
     <number>0</number>
    </property>
-   <widget class="QWidget" name="tab">
+   <widget class="QWidget" name="ui_tab">
     <attribute name="title">
      <string>Verben</string>
     </attribute>
@@ -96,7 +96,7 @@
      <property name="checked">
       <bool>false</bool>
      </property>
-     <widget class="QCheckBox" name="acheter">
+     <widget class="QCheckBox" name="ui_acheter">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -112,7 +112,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QCheckBox" name="aller">
+     <widget class="QCheckBox" name="ui_aller">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -128,7 +128,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QCheckBox" name="attendre">
+     <widget class="QCheckBox" name="ui_attendre">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -144,7 +144,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QCheckBox" name="avoir">
+     <widget class="QCheckBox" name="ui_avoir">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -160,7 +160,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QCheckBox" name="entendre">
+     <widget class="QCheckBox" name="ui_entendre">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -176,7 +176,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QCheckBox" name="faire">
+     <widget class="QCheckBox" name="ui_faire">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -192,7 +192,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QCheckBox" name="manger">
+     <widget class="QCheckBox" name="ui_manger">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -208,7 +208,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QCheckBox" name="epeler">
+     <widget class="QCheckBox" name="ui_epeler">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -224,7 +224,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QCheckBox" name="etre">
+     <widget class="QCheckBox" name="ui_etre">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -240,7 +240,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QCheckBox" name="mettre">
+     <widget class="QCheckBox" name="ui_mettre">
       <property name="geometry">
        <rect>
         <x>110</x>
@@ -256,7 +256,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QCheckBox" name="parler">
+     <widget class="QCheckBox" name="ui_parler">
       <property name="geometry">
        <rect>
         <x>110</x>
@@ -272,7 +272,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QCheckBox" name="partir">
+     <widget class="QCheckBox" name="ui_partir">
       <property name="geometry">
        <rect>
         <x>110</x>
@@ -288,7 +288,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QCheckBox" name="dire">
+     <widget class="QCheckBox" name="ui_dire">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -304,7 +304,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QCheckBox" name="pouvoir">
+     <widget class="QCheckBox" name="ui_pouvoir">
       <property name="geometry">
        <rect>
         <x>110</x>
@@ -320,7 +320,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QCheckBox" name="preferer">
+     <widget class="QCheckBox" name="ui_preferer">
       <property name="geometry">
        <rect>
         <x>110</x>
@@ -336,7 +336,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QCheckBox" name="prendre">
+     <widget class="QCheckBox" name="ui_prendre">
       <property name="geometry">
        <rect>
         <x>110</x>
@@ -352,7 +352,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QCheckBox" name="ranger">
+     <widget class="QCheckBox" name="ui_ranger">
       <property name="geometry">
        <rect>
         <x>110</x>
@@ -368,7 +368,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QCheckBox" name="regarder">
+     <widget class="QCheckBox" name="ui_regarder">
       <property name="geometry">
        <rect>
         <x>110</x>
@@ -384,7 +384,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QCheckBox" name="repondre">
+     <widget class="QCheckBox" name="ui_repondre">
       <property name="geometry">
        <rect>
         <x>110</x>
@@ -400,7 +400,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QCheckBox" name="sortir">
+     <widget class="QCheckBox" name="ui_sortir">
       <property name="geometry">
        <rect>
         <x>110</x>
@@ -416,7 +416,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QCheckBox" name="venir">
+     <widget class="QCheckBox" name="ui_venir">
       <property name="geometry">
        <rect>
         <x>110</x>
@@ -432,7 +432,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QCheckBox" name="vouloir">
+     <widget class="QCheckBox" name="ui_vouloir">
       <property name="geometry">
        <rect>
         <x>110</x>
@@ -448,7 +448,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QCheckBox" name="apprendre">
+     <widget class="QCheckBox" name="ui_apprendre">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -464,7 +464,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QCheckBox" name="comprendre">
+     <widget class="QCheckBox" name="ui_comprendre">
       <property name="enabled">
        <bool>true</bool>
       </property>
@@ -484,7 +484,7 @@
       </property>
      </widget>
     </widget>
-    <widget class="QCheckBox" name="StandardVerben">
+    <widget class="QCheckBox" name="ui_StandardVerben">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -513,7 +513,7 @@
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QCheckBox" name="Unite1Verben">
+    <widget class="QCheckBox" name="ui_Unite1Verben">
      <property name="geometry">
       <rect>
        <x>220</x>
@@ -548,7 +548,7 @@
      <property name="title">
       <string/>
      </property>
-     <widget class="QCheckBox" name="lire">
+     <widget class="QCheckBox" name="ui_lire">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -564,7 +564,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QCheckBox" name="ecrire">
+     <widget class="QCheckBox" name="ui_ecrire">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -581,7 +581,7 @@
       </property>
      </widget>
     </widget>
-    <widget class="QCheckBox" name="Unite2Verben">
+    <widget class="QCheckBox" name="ui_Unite2Verben">
      <property name="geometry">
       <rect>
        <x>220</x>
@@ -616,7 +616,7 @@
      <property name="title">
       <string/>
      </property>
-     <widget class="QCheckBox" name="commencer">
+     <widget class="QCheckBox" name="ui_commencer">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -632,7 +632,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QCheckBox" name="devoir">
+     <widget class="QCheckBox" name="ui_devoir">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -648,7 +648,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QCheckBox" name="voir">
+     <widget class="QCheckBox" name="ui_voir">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -665,7 +665,7 @@
       </property>
      </widget>
     </widget>
-    <widget class="QCheckBox" name="Unite3Verben">
+    <widget class="QCheckBox" name="ui_Unite3Verben">
      <property name="geometry">
       <rect>
        <x>220</x>
@@ -700,7 +700,7 @@
      <property name="title">
       <string/>
      </property>
-     <widget class="QCheckBox" name="connaitre">
+     <widget class="QCheckBox" name="ui_connaitre">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -716,7 +716,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QCheckBox" name="savoir">
+     <widget class="QCheckBox" name="ui_savoir">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -733,7 +733,7 @@
       </property>
      </widget>
     </widget>
-    <widget class="QCheckBox" name="Unite4Verben">
+    <widget class="QCheckBox" name="ui_Unite4Verben">
      <property name="geometry">
       <rect>
        <x>220</x>
@@ -768,7 +768,7 @@
      <property name="title">
       <string/>
      </property>
-     <widget class="QCheckBox" name="ouvrir">
+     <widget class="QCheckBox" name="ui_ouvrir">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -784,7 +784,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QCheckBox" name="reagir">
+     <widget class="QCheckBox" name="ui_reagir">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -801,7 +801,7 @@
       </property>
      </widget>
     </widget>
-    <widget class="QCheckBox" name="Unite5Verben">
+    <widget class="QCheckBox" name="ui_Unite5Verben">
      <property name="geometry">
       <rect>
        <x>340</x>
@@ -836,7 +836,7 @@
      <property name="title">
       <string/>
      </property>
-     <widget class="QCheckBox" name="payer">
+     <widget class="QCheckBox" name="ui_payer">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -852,7 +852,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QCheckBox" name="plaire">
+     <widget class="QCheckBox" name="ui_plaire">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -869,7 +869,7 @@
       </property>
      </widget>
     </widget>
-    <widget class="QCheckBox" name="Unite6Verben">
+    <widget class="QCheckBox" name="ui_Unite6Verben">
      <property name="geometry">
       <rect>
        <x>340</x>
@@ -904,7 +904,7 @@
      <property name="title">
       <string/>
      </property>
-     <widget class="QCheckBox" name="recevoir">
+     <widget class="QCheckBox" name="ui_recevoir">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -920,7 +920,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QCheckBox" name="rire">
+     <widget class="QCheckBox" name="ui_rire">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -937,7 +937,7 @@
       </property>
      </widget>
     </widget>
-    <widget class="QCheckBox" name="selbstdefinierteVerben">
+    <widget class="QCheckBox" name="ui_self_defined_verbs">
      <property name="enabled">
       <bool>false</bool>
      </property>
@@ -963,7 +963,7 @@
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QGroupBox" name="selbstdefinierteBox">
+    <widget class="QGroupBox" name="ui_self_defined_box">
      <property name="geometry">
       <rect>
        <x>340</x>
@@ -975,7 +975,7 @@
      <property name="title">
       <string/>
      </property>
-     <widget class="QCheckBox" name="selbst_1">
+     <widget class="QCheckBox" name="ui_self_1">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -994,7 +994,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QCheckBox" name="selbst_2">
+     <widget class="QCheckBox" name="ui_self_2">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -1010,7 +1010,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QCheckBox" name="selbst_3">
+     <widget class="QCheckBox" name="ui_self_3">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -1026,7 +1026,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QCheckBox" name="selbst_4">
+     <widget class="QCheckBox" name="ui_self_4">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -1042,7 +1042,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QCheckBox" name="selbst_5">
+     <widget class="QCheckBox" name="ui_self_5">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -1058,7 +1058,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QCheckBox" name="selbst_6">
+     <widget class="QCheckBox" name="ui_self_6">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -1074,7 +1074,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QCheckBox" name="selbst_7">
+     <widget class="QCheckBox" name="ui_self_7">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -1101,11 +1101,11 @@
      </widget>
     </widget>
    </widget>
-   <widget class="QWidget" name="definierenTab">
+   <widget class="QWidget" name="ui_define_tab">
     <attribute name="title">
      <string>Neue Verben definieren</string>
     </attribute>
-    <widget class="QLabel" name="LoeschenULabel">
+    <widget class="QLabel" name="DeleteULabel">
      <property name="geometry">
       <rect>
        <x>310</x>
@@ -1133,7 +1133,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QGroupBox" name="VerbLoeschenBox">
+    <widget class="QGroupBox" name="ui_delete_verb_box">
      <property name="geometry">
       <rect>
        <x>290</x>
@@ -1145,7 +1145,7 @@
      <property name="title">
       <string/>
      </property>
-     <widget class="QLabel" name="loeschenAuftrag">
+     <widget class="QLabel" name="ui_deleteOrder">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -1164,7 +1164,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QLineEdit" name="loeschenEingabe">
+     <widget class="QLineEdit" name="ui_delete_input">
       <property name="enabled">
        <bool>false</bool>
       </property>
@@ -1177,7 +1177,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QLabel" name="loeschenInfo">
+     <widget class="QLabel" name="ui_delete_info">
       <property name="enabled">
        <bool>true</bool>
       </property>
@@ -1204,7 +1204,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QPushButton" name="loeschenButton">
+     <widget class="QPushButton" name="ui_delete_button">
       <property name="enabled">
        <bool>false</bool>
       </property>
@@ -1221,7 +1221,7 @@
       </property>
      </widget>
     </widget>
-    <widget class="QGroupBox" name="VerbenDefi">
+    <widget class="QGroupBox" name="ui_verbs_def">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -1240,7 +1240,7 @@
      <property name="title">
       <string>Verb definieren</string>
      </property>
-     <widget class="QLabel" name="infoDef">
+     <widget class="QLabel" name="ui_info_def">
       <property name="geometry">
        <rect>
         <x>15</x>
@@ -1259,7 +1259,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QPushButton" name="defi">
+     <widget class="QPushButton" name="ui_defi">
       <property name="enabled">
        <bool>false</bool>
       </property>
@@ -1275,7 +1275,7 @@
        <string>Definieren</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="zurueckDef">
+     <widget class="QPushButton" name="ui_back_def">
       <property name="geometry">
        <rect>
         <x>24</x>
@@ -1305,17 +1305,17 @@
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
        </property>
        <item row="0" column="0">
-        <widget class="QLabel" name="infinitif">
+        <widget class="QLabel" name="ui_infinitive">
          <property name="text">
           <string>Infinitif</string>
          </property>
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QLineEdit" name="infinitifS"/>
+        <widget class="QLineEdit" name="ui_infinitiveS"/>
        </item>
        <item row="1" column="0">
-        <widget class="QLabel" name="je">
+        <widget class="QLabel" name="ui_je">
          <property name="text">
           <string>Je:</string>
          </property>
@@ -1325,10 +1325,10 @@
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QLineEdit" name="jeS"/>
+        <widget class="QLineEdit" name="ui_jeS"/>
        </item>
        <item row="2" column="0">
-        <widget class="QLabel" name="tu">
+        <widget class="QLabel" name="ui_tu">
          <property name="text">
           <string>Tu:</string>
          </property>
@@ -1338,10 +1338,10 @@
         </widget>
        </item>
        <item row="2" column="1">
-        <widget class="QLineEdit" name="tuS"/>
+        <widget class="QLineEdit" name="ui_tuS"/>
        </item>
        <item row="3" column="0">
-        <widget class="QLabel" name="il">
+        <widget class="QLabel" name="ui_il">
          <property name="text">
           <string>Il/Elle/On:</string>
          </property>
@@ -1351,10 +1351,10 @@
         </widget>
        </item>
        <item row="3" column="1">
-        <widget class="QLineEdit" name="ilS"/>
+        <widget class="QLineEdit" name="ui_ilS"/>
        </item>
        <item row="4" column="0">
-        <widget class="QLabel" name="nous">
+        <widget class="QLabel" name="ui_nous">
          <property name="text">
           <string>Nous:</string>
          </property>
@@ -1364,10 +1364,10 @@
         </widget>
        </item>
        <item row="4" column="1">
-        <widget class="QLineEdit" name="nousS"/>
+        <widget class="QLineEdit" name="ui_nousS"/>
        </item>
        <item row="5" column="0">
-        <widget class="QLabel" name="vous">
+        <widget class="QLabel" name="ui_vous">
          <property name="text">
           <string>Vous:</string>
          </property>
@@ -1377,10 +1377,10 @@
         </widget>
        </item>
        <item row="5" column="1">
-        <widget class="QLineEdit" name="vousS"/>
+        <widget class="QLineEdit" name="ui_vousS"/>
        </item>
        <item row="6" column="0">
-        <widget class="QLabel" name="ils">
+        <widget class="QLabel" name="ui_ils">
          <property name="text">
           <string>Ils/Elles:</string>
          </property>
@@ -1390,10 +1390,10 @@
         </widget>
        </item>
        <item row="6" column="1">
-        <widget class="QLineEdit" name="ilsS"/>
+        <widget class="QLineEdit" name="ui_ilsS"/>
        </item>
        <item row="7" column="0">
-        <widget class="QLabel" name="participe">
+        <widget class="QLabel" name="ui_participe">
          <property name="text">
           <string>Participe</string>
          </property>
@@ -1403,10 +1403,10 @@
         </widget>
        </item>
        <item row="7" column="1">
-        <widget class="QLineEdit" name="participeS"/>
+        <widget class="QLineEdit" name="ui_participeS"/>
        </item>
        <item row="8" column="0">
-        <widget class="QLabel" name="hilfsverben">
+        <widget class="QLabel" name="ui_auxiliary">
          <property name="text">
           <string>Hilfsverb:</string>
          </property>
@@ -1416,7 +1416,7 @@
         </widget>
        </item>
        <item row="8" column="1">
-        <widget class="QLineEdit" name="hilfsverbS"/>
+        <widget class="QLineEdit" name="ui_auxiliaryS"/>
        </item>
       </layout>
      </widget>
