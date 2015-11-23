@@ -50,7 +50,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Verben</string>
+    <string>Verbs</string>
    </property>
   </widget>
   <widget class="QTabWidget" name="ui_verbs_tab">
@@ -67,7 +67,7 @@
    </property>
    <widget class="QWidget" name="ui_tab">
     <attribute name="title">
-     <string>Verben</string>
+     <string>Verbs</string>
     </attribute>
     <widget class="QGroupBox" name="StandardBox">
      <property name="geometry">
@@ -100,7 +100,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>acheter</string>
+       <string notr="true">acheter</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -116,7 +116,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>aller</string>
+       <string notr="true">aller</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -132,7 +132,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>attendre</string>
+       <string notr="true">attendre</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -148,7 +148,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>avoir</string>
+       <string notr="true">avoir</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -164,7 +164,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>entendre</string>
+       <string notr="true">entendre</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -180,7 +180,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>faire</string>
+       <string notr="true">faire</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -196,7 +196,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>manger</string>
+       <string notr="true">manger</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -212,7 +212,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>épeler</string>
+       <string notr="true">épeler</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -228,7 +228,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>être</string>
+       <string notr="true">être</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -244,7 +244,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>mettre</string>
+       <string notr="true">mettre</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -260,7 +260,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>parler</string>
+       <string notr="true">parler</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -276,7 +276,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>partir</string>
+       <string notr="true">partir</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -292,7 +292,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>dire</string>
+       <string notr="true">dire</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -308,7 +308,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>pouvoir</string>
+       <string notr="true">pouvoir</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -324,7 +324,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>préférer</string>
+       <string notr="true">préférer</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -340,7 +340,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>prendre</string>
+       <string notr="true">prendre</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -356,7 +356,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>ranger</string>
+       <string notr="true">ranger</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -372,7 +372,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>regarder</string>
+       <string notr="true">regarder</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -388,7 +388,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>répondre</string>
+       <string notr="true">répondre</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -404,7 +404,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>sortir</string>
+       <string notr="true">sortir</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -420,7 +420,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>venir</string>
+       <string notr="true">venir</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -436,7 +436,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>vouloir</string>
+       <string notr="true">vouloir</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -452,7 +452,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>apprendre</string>
+       <string notr="true">apprendre</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -471,7 +471,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>comprendre</string>
+       <string notr="true">comprendre</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -495,7 +495,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Standard</string>
+      <string notr="true">Generale</string>
      </property>
      <property name="checkable">
       <bool>true</bool>
@@ -524,7 +524,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Unité 1</string>
+      <string notr="true">Unité 1</string>
      </property>
      <property name="checked">
       <bool>true</bool>
@@ -540,7 +540,7 @@
       </rect>
      </property>
      <property name="title">
-      <string/>
+      <string notr="true"/>
      </property>
      <widget class="QCheckBox" name="ui_lire">
       <property name="geometry">
@@ -552,7 +552,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>lire</string>
+       <string notr="true">lire</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -568,7 +568,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>écrire</string>
+       <string notr="true">écrire</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -592,7 +592,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Unité 2</string>
+      <string notr="true">Unité 2</string>
      </property>
      <property name="checked">
       <bool>true</bool>
@@ -608,7 +608,7 @@
       </rect>
      </property>
      <property name="title">
-      <string/>
+      <string notr="true"/>
      </property>
      <widget class="QCheckBox" name="ui_commencer">
       <property name="geometry">
@@ -620,7 +620,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>commencer</string>
+       <string notr="true">commencer</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -636,7 +636,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>devoir</string>
+       <string notr="true">devoir</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -652,7 +652,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>voir</string>
+       <string notr="true">voir</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -676,7 +676,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Unité 3</string>
+      <string notr="true">Unité 3</string>
      </property>
      <property name="checked">
       <bool>true</bool>
@@ -692,7 +692,7 @@
       </rect>
      </property>
      <property name="title">
-      <string/>
+      <string notr="true"/>
      </property>
      <widget class="QCheckBox" name="ui_connaitre">
       <property name="geometry">
@@ -704,7 +704,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>connaître</string>
+       <string notr="true">connaître</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -720,7 +720,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>savoir</string>
+       <string notr="true">savoir</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -744,7 +744,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Unité 4</string>
+      <string notr="true">Unité 4</string>
      </property>
      <property name="checked">
       <bool>true</bool>
@@ -760,7 +760,7 @@
       </rect>
      </property>
      <property name="title">
-      <string/>
+      <string notr="true"/>
      </property>
      <widget class="QCheckBox" name="ui_ouvrir">
       <property name="geometry">
@@ -772,7 +772,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>ouvrir</string>
+       <string notr="true">ouvrir</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -788,7 +788,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>réagir</string>
+       <string notr="true">réagir</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -812,7 +812,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Unité 5</string>
+      <string notr="true">Unité 5</string>
      </property>
      <property name="checked">
       <bool>true</bool>
@@ -828,7 +828,7 @@
       </rect>
      </property>
      <property name="title">
-      <string/>
+      <string notr="true"/>
      </property>
      <widget class="QCheckBox" name="ui_payer">
       <property name="geometry">
@@ -840,7 +840,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>payer</string>
+       <string notr="true">payer</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -856,7 +856,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>plaire</string>
+       <string notr="true">plaire</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -880,7 +880,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Unité 6</string>
+      <string notr="true">Unité 6</string>
      </property>
      <property name="checked">
       <bool>true</bool>
@@ -896,7 +896,7 @@
       </rect>
      </property>
      <property name="title">
-      <string/>
+      <string notr="true"/>
      </property>
      <widget class="QCheckBox" name="ui_recevoir">
       <property name="geometry">
@@ -908,7 +908,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>recevoir</string>
+       <string notr="true">recevoir</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -924,7 +924,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>rire</string>
+       <string notr="true">rire</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -951,7 +951,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Selbstdefinierte</string>
+      <string>Self Defined</string>
      </property>
      <property name="checked">
       <bool>false</bool>
@@ -1097,7 +1097,7 @@
    </widget>
    <widget class="QWidget" name="ui_define_tab">
     <attribute name="title">
-     <string>Neue Verben definieren</string>
+     <string>Define New Verb</string>
     </attribute>
     <widget class="QLabel" name="DeleteULabel">
      <property name="geometry">
@@ -1118,7 +1118,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Selbst definiertes Verb löschen</string>
+      <string>Delete self defined verb</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -1149,7 +1149,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>Geben Sie den Infinitif des zu löschenden Verbs ein</string>
+       <string>Enter verb's infinitive</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1189,7 +1189,7 @@
        </font>
       </property>
       <property name="text">
-       <string>Sie haben noch kein eigenes Verb definiert</string>
+       <string>You have no self defined verbs yet</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1211,7 +1211,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>Löschen</string>
+       <string>Delete</string>
       </property>
      </widget>
     </widget>
@@ -1232,7 +1232,7 @@
       </font>
      </property>
      <property name="title">
-      <string>Verb definieren</string>
+      <string>Define verb</string>
      </property>
      <widget class="QPushButton" name="ui_back_def">
       <property name="geometry">
@@ -1244,7 +1244,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>Zurücksetzen</string>
+       <string>Reset</string>
       </property>
      </widget>
      <widget class="QWidget" name="layoutWidget">
@@ -1266,7 +1266,7 @@
        <item row="0" column="0">
         <widget class="QLabel" name="ui_infinitive">
          <property name="text">
-          <string>Infinitif</string>
+          <string>Infinitive:</string>
          </property>
         </widget>
        </item>
@@ -1276,7 +1276,7 @@
        <item row="1" column="0">
         <widget class="QLabel" name="ui_je">
          <property name="text">
-          <string>Je:</string>
+          <string notr="true">Je:</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1289,7 +1289,7 @@
        <item row="2" column="0">
         <widget class="QLabel" name="ui_tu">
          <property name="text">
-          <string>Tu:</string>
+          <string notr="true">Tu:</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1302,7 +1302,7 @@
        <item row="3" column="0">
         <widget class="QLabel" name="ui_il">
          <property name="text">
-          <string>Il/Elle/On:</string>
+          <string notr="true">Il/Elle/On:</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1315,7 +1315,7 @@
        <item row="4" column="0">
         <widget class="QLabel" name="ui_nous">
          <property name="text">
-          <string>Nous:</string>
+          <string notr="true">Nous:</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1328,7 +1328,7 @@
        <item row="5" column="0">
         <widget class="QLabel" name="ui_vous">
          <property name="text">
-          <string>Vous:</string>
+          <string notr="true">Vous:</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1341,7 +1341,7 @@
        <item row="6" column="0">
         <widget class="QLabel" name="ui_ils">
          <property name="text">
-          <string>Ils/Elles:</string>
+          <string notr="true">Ils/Elles:</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1354,7 +1354,7 @@
        <item row="7" column="0">
         <widget class="QLabel" name="ui_participe">
          <property name="text">
-          <string>Participe</string>
+          <string notr="true">Participe:</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1367,7 +1367,7 @@
        <item row="8" column="0">
         <widget class="QLabel" name="ui_auxiliary">
          <property name="text">
-          <string>Hilfsverb:</string>
+          <string>Auxiliary:</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1385,14 +1385,14 @@
       </property>
       <property name="geometry">
        <rect>
-        <x>130</x>
+        <x>110</x>
         <y>340</y>
-        <width>71</width>
-        <height>27</height>
+        <width>91</width>
+        <height>21</height>
        </rect>
       </property>
       <property name="text">
-       <string>Definieren</string>
+       <string>Define</string>
       </property>
      </widget>
     </widget>
@@ -1406,7 +1406,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Geben Sie alle Formen an.</string>
+      <string>Enter all forms</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>

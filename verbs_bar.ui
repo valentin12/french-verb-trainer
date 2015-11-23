@@ -35,7 +35,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Richtig:</string>
+     <string>Right: </string>
     </property>
    </widget>
    <widget class="QLabel" name="ui_percent_total">
@@ -53,7 +53,7 @@
      </font>
     </property>
     <property name="text">
-     <string>      %richtig</string>
+     <string>      % right</string>
     </property>
    </widget>
    <widget class="QGroupBox" name="ui_verbs">
@@ -88,10 +88,10 @@
       </rect>
      </property>
      <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wählt Verb und Form zufällig aus.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Uses random verbs and forms&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="text">
-      <string>Zufallsabfrage</string>
+      <string>Random</string>
      </property>
     </widget>
     <widget class="QPushButton" name="ui_single">
@@ -104,13 +104,10 @@
       </rect>
      </property>
      <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Fragt alle Formen des ausgewählten Verbs ab.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-     <property name="whatsThis">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Test all forms of the selected verb&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="text">
-      <string>Einzelabfrage</string>
+      <string>Single</string>
      </property>
      <property name="autoDefault">
       <bool>false</bool>
@@ -132,10 +129,10 @@
       </rect>
      </property>
      <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Fragt bei allen Verben die angegebenen Formen ab.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tests the form for all verbs&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="text">
-      <string>Formabfrage</string>
+      <string>Form</string>
      </property>
     </widget>
     <widget class="QListWidget" name="ui_form_type">
@@ -190,7 +187,7 @@
      </rect>
     </property>
     <property name="title">
-     <string>Allgemeines</string>
+     <string>General</string>
     </property>
     <property name="flat">
      <bool>false</bool>
@@ -213,7 +210,7 @@
       </font>
      </property>
      <property name="text">
-      <string>frage</string>
+      <string notr="true">question</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -260,7 +257,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>allgaus</string>
+      <string notr="true">general_out</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -279,7 +276,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>allgloesung</string>
+      <string notr="true">general_solution</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -304,7 +301,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Falsch:</string>
+     <string>Wrong: </string>
     </property>
    </widget>
    <widget class="QGroupBox" name="ui_query">
@@ -323,7 +320,7 @@
      <enum>Qt::NoFocus</enum>
     </property>
     <property name="title">
-     <string>Abfrage</string>
+     <string>Test</string>
     </property>
     <widget class="QLineEdit" name="ui_input1">
      <property name="geometry">
@@ -345,7 +342,7 @@
       </rect>
      </property>
      <property name="text">
-      <string/>
+      <string notr="true"/>
      </property>
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -370,7 +367,7 @@
       <set>Qt::ImhNone</set>
      </property>
      <property name="text">
-      <string/>
+      <string notr="true"/>
      </property>
      <property name="textFormat">
       <enum>Qt::AutoText</enum>
@@ -417,7 +414,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Ende</string>
+      <string>Quit</string>
      </property>
      <property name="autoDefault">
       <bool>false</bool>
@@ -455,7 +452,7 @@
       <number>1</number>
      </property>
      <property name="text">
-      <string/>
+      <string notr="true"/>
      </property>
      <property name="textFormat">
       <enum>Qt::RichText</enum>
@@ -499,7 +496,7 @@
       </font>
      </property>
      <property name="text">
-      <string/>
+      <string notr="true"/>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -520,7 +517,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Richtig:</string>
+      <string>Right: </string>
      </property>
     </widget>
     <widget class="QLabel" name="ui_wrong">
@@ -538,7 +535,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Falsch:</string>
+      <string>Wrong: </string>
      </property>
     </widget>
     <widget class="QLabel" name="ui_percent">
@@ -556,7 +553,7 @@
       </font>
      </property>
      <property name="text">
-      <string>      % richtig</string>
+      <string>      % right</string>
      </property>
     </widget>
    </widget>
@@ -590,6 +587,12 @@
     <bool>true</bool>
    </property>
    <property name="text">
+    <string>Verbs</string>
+   </property>
+   <property name="iconText">
+    <string>Verbs</string>
+   </property>
+   <property name="toolTip">
     <string>Verbs</string>
    </property>
   </action>

@@ -1,8 +1,6 @@
 import sys, sqlite3, random, glob
 from PyQt4 import QtGui, uic, QtCore
-
-
-translate = QtCore.QCoreApplication.translate
+from PyQt4.QtCore import QTranslator, QLocale
 
 
 class VerbsDialog(QtGui.QDialog):
@@ -127,7 +125,7 @@ class VerbsDialog(QtGui.QDialog):
                         self.ui.ui_info_def.setText(translate("Context", "Verb already present"))
                         break
                 else:
-                    self.ui.ui_info_def.setText("Enter all forms")
+                    self.ui.ui_info_def.setText(translate("Context", "Enter all forms"))
                     break
         else:
             cur = self.con.cursor()
@@ -644,7 +642,17 @@ class MainDialog(QtGui.QMainWindow):
         vd.show()
 
 
-app = QtGui.QApplication(sys.argv)
-dialog = MainDialog()
-dialog.show()
-sys.exit(app.exec_())
+if __name__ == '__main__':
+    app = QtGui.QApplication(sys.argv)
+    qt_translator = QTranslator()
+    locale = QLocale()
+    locale_name = locale.name().lower()[:2]
+    if qt_translator.load("verbtrainer_{}".format(locale_name)):
+        print("Translation could be loaded!")
+    app.installTranslator(qt_translator)
+
+    translate = app.translate
+
+    dialog = MainDialog()
+    dialog.show()
+    sys.exit(app.exec_())

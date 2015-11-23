@@ -1,5 +1,5 @@
-SOURCES += verbenGUI.pyw
-TRANSLATIONS += verbenGUI_de.ts
+SOURCES += verbtrainer.pyw
+TRANSLATIONS += verbtrainer_de.ts
 FORMS += verbsdialog.ui
 FORMS += verbs_bar.ui
 
