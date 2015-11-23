@@ -1,5 +1,8 @@
 import sys, sqlite3, random, glob
-from PyQt4 import QtGui, uic
+from PyQt4 import QtGui, uic, QtCore
+
+
+translate = QtCore.QCoreApplication.translate
 
 
 class VerbsDialog(QtGui.QDialog):
@@ -8,7 +11,7 @@ class VerbsDialog(QtGui.QDialog):
         self.change = ""
         self.ui = uic.loadUi("verbsdialog.ui", self)
         self.setWindowIcon(QtGui.QIcon('frenchflag.png'))
-        self.setWindowTitle("Verben")
+        self.setWindowTitle(translate("Context", "Verbs"))
         self.setModal(1)
         self.con = sqlite3.connect("frenchverbs.db")
         self.cur = self.con.cursor()
@@ -104,7 +107,7 @@ class VerbsDialog(QtGui.QDialog):
         self.ui.ui_delete_input.setEnabled(True)
         self.ui.ui_delete_info.setText("")
         self.back_clicked()
-        self.ui.ui_info_def.setText("Das Verb wurde eingelesen")
+        self.ui.ui_info_def.setText(translate("Context", "Verb read"))
         exec("self.ui.ui_{}.show()".format(others1))
         exec("self.ui.ui_{}.setText('{}')".format(others1, infinitive))
         self.ui.ui_self_defined_verbs.setEnabled(True)
@@ -121,25 +124,25 @@ class VerbsDialog(QtGui.QDialog):
                 self.ui.ui_defi.setEnabled(False)
                 for verb in cur:
                     if self.ui.ui_infinitiveS.text().lower() == verb[0]:
-                        self.ui.ui_info_def.setText("Das Verb ist schon vorhanden")
+                        self.ui.ui_info_def.setText(translate("Context", "Verb already present"))
                         break
                 else:
-                    self.ui.ui_info_def.setText("Geben Sie alle Formen an")
+                    self.ui.ui_info_def.setText("Enter all forms")
                     break
         else:
             cur = self.con.cursor()
             cur.execute("SELECT * FROM verb")
             for verb in cur:
                 if self.ui.ui_infinitiveS.text().lower() == verb[0]:
-                    self.ui.ui_info_def.setText("Das Verb ist schon vorhanden")
+                    self.ui.ui_info_def.setText(translate("Context", "Verb already present"))
                     self.ui.ui_defi.setEnabled(False)
                     break
                 else:
                     if self.ui.ui_auxiliaryS.text().lower() == "avoir" or self.ui.ui_auxiliaryS.text().lower() == "être":
-                        self.ui.ui_info_def.setText("Sie können das Verb jetzt definieren")
+                        self.ui.ui_info_def.setText(translate("Context", "You can now define the verb"))
                         self.ui.ui_defi.setEnabled(True)
                     else:
-                        self.ui.ui_info_def.setText("Das Hilfsverb muss avoir oder être sein")
+                        self.ui.ui_info_def.setText(translate("Context", "The auxiliary verb has to be avoir or être"))
                         self.ui.ui_defi.setEnabled(False)
 
     def back_clicked(self):
@@ -169,18 +172,18 @@ class VerbsDialog(QtGui.QDialog):
         else:
             self.ui.ui_delete_input.setEnabled(False)
             self.ui.ui_self_defined_verbs.setEnabled(False)
-            self.ui.ui_delete_info.setText("Sie haben noch kein eigenes Verb definiert")
+            self.ui.ui_delete_info.setText(translate("Context", "You have no self defined verbs yet"))
 
     def delete_changed(self):
         cur = self.con.cursor()
         cur.execute("SELECT * FROM verb WHERE unite='E'")
         for element in cur:
             if element[0] == self.ui.ui_delete_input.text().lower():
-                self.ui.ui_delete_info.setText("Sie können das verb jetzt löschen")
+                self.ui.ui_delete_info.setText(translate("Context", "You can delete the verb now"))
                 self.ui.ui_delete_button.setEnabled(True)
                 break
         else:
-            self.ui.ui_delete_info.setText("Das Verb ist nicht vorhanden")
+            self.ui.ui_delete_info.setText(translate("Verb not found"))
         if not self.ui.ui_delete_input.text().lower():
             self.ui.ui_delete_info.setText("")
 
@@ -293,7 +296,6 @@ class MainDialog(QtGui.QMainWindow):
                 self.wrong_total = split[1]
         self.percent_total = self.total_in_percent()
 
-        # Slots verbinden
         self.ui.ui_buttonAQuit.clicked.connect(self.on_finished)
         self.ui.ui_buttonAOK.clicked.connect(self.input)
         self.ui.ui_single.clicked.connect(self.single_clicked)
@@ -301,9 +303,9 @@ class MainDialog(QtGui.QMainWindow):
         self.ui.ui_send.clicked.connect(self.send_clicked)
         self.ui.ui_form_query.clicked.connect(self.query_form_clicked)
 
-        self.ui.ui_right_total.setText("Richtig: " + self.right_total)
-        self.ui.ui_wrong_total.setText("Falsch: " + self.wrong_total)
-        self.ui.ui_percent_total.setText(str(self.percent_total) + "% richtig")
+        self.ui.ui_right_total.setText(translate("Context", "Right: ") + self.right_total)
+        self.ui.ui_wrong_total.setText(translate("Context", "Wrong: ") + self.wrong_total)
+        self.ui.ui_percent_total.setText(str(self.percent_total) + translate("Context", "% right"))
 
         self.ComboBox = []
         con = sqlite3.connect("frenchverbs.db")
@@ -356,11 +358,11 @@ class MainDialog(QtGui.QMainWindow):
         self.verbs_right = 0
         self.verbs_wrong = 0
         self.percent_verbs = 0
-        self.ui.ui_right.setText("Richtig: ")
-        self.ui.ui_wrong.setText("Falsch: ")
-        self.ui.ui_percent.setText("      % richtig")
+        self.ui.ui_right.setText(translate("Context", "Right: "))
+        self.ui.ui_wrong.setText(translate("Context", "Wrong: "))
+        self.ui.ui_percent.setText(translate("Context", "      % right"))
 
-    def single_clicked(self):  # Wird abgerufen, wenn auf den 'Einzelabfrage'-Button geklickt wird
+    def single_clicked(self):
         self.selected = self.ui.ui_verbs_list.currentText()
         self.con = sqlite3.connect("frenchverbs.db")
         self.cursor = self.con.cursor()
@@ -373,19 +375,19 @@ class MainDialog(QtGui.QMainWindow):
         if single:
             self.ui.ui_infinitive.setText(self.selected)
             self.ui.ui_query.setEnabled(True)
-            self.ui.ui_query_type.setText("Verben")
-            self.ui.ui_label.setText("Geben Sie die konjugierte Verbform ein")
+            self.ui.ui_query_type.setText(translate("Context", "Verbs"))
+            self.ui.ui_label.setText(translate("Context", "Enter the conjugated verb form"))
             self.ui.ui_label1.setText(self.eforms[1])
             self.ui.ui_verbs.setEnabled(False)
-            self.ui.ui_right.setText("Richtig: " + str(self.verbs_right))
-            self.ui.ui_wrong.setText("Falsch: " + str(self.verbs_wrong))
-            self.ui.ui_percent.setText(str(self.percent_verbs) + "% richtig")
+            self.ui.ui_right.setText(translate("Context", "Right: ") + str(self.verbs_right))
+            self.ui.ui_wrong.setText(translate("Context", "Wrong: ") + str(self.verbs_wrong))
+            self.ui.ui_percent.setText(str(self.percent_verbs) + translate("Context", "% right"))
             self.total = 1
             self.ui.ui_verb_info.setText("")
         elif not single:
-            self.ui.ui_verb_info.setText("Sie haben kein Verb eingeschaltet")
+            self.ui.ui_verb_info.setText(translate("Context", "No verb enabled"))
 
-    def random_clicked(self):  # Wird ausgeführt, wenn der 'Zufallsabfrage'-Button geklickt wird
+    def random_clicked(self):
         self.cursor_content = []
         random.seed()
         self.conz = sqlite3.connect("frenchverbs.db")
@@ -404,34 +406,34 @@ class MainDialog(QtGui.QMainWindow):
                 self.infinitive.append(i * 8)
             if self.random in self.infinitive:
                 self.random += 1
-            self.ui.ui_query_type.setText("Verben")
-            self.ui.ui_label.setText("Geben Sie die konjugierte Verbform ein")
+            self.ui.ui_query_type.setText(translate("Context", "Verbs"))
+            self.ui.ui_label.setText(translate("Context", "Enter the conjugated verb form"))
             self.ui.ui_label1.setText(self.cursor_content[self.random][0])
             self.ui.ui_infinitive.setText(self.cursor_content[self.random - self.cursor_content[self.random][2]][1])
             self.total = 2
             self.ui.ui_verb_info.setText("")
         elif not self.cursor_content:
-            self.ui.ui_verb_info.setText("Sie haben kein Verb eingeschaltet")
+            self.ui.ui_verb_info.setText(translate("Context", "No verb enabled"))
 
-    def input(self):  # Wird ausgeführt, wenn auf den 'OK'-Button geklickt wird.
+    def input(self):
         self.ui.ui_input1.setFocus()
         if self.total == 1:
-            self.ui.ui_right.setText("Richtig: " + str(self.verbs_right))
-            self.ui.ui_wrong.setText("Falsch: " + str(self.verbs_wrong))
-            self.ui.ui_percent.setText(str(self.percent_verbs) + "% richtig")
-            # Liest den Inhalt des Cursors aus
+            self.ui.ui_right.setText(translate("Context", "Right: ") + str(self.verbs_right))
+            self.ui.ui_wrong.setText(translate("Context", "Wrong: ") + str(self.verbs_wrong))
+            self.ui.ui_percent.setText(str(self.percent_verbs) + translate("Context", "% right"))
+
             for verbform in self.cursor:
                 self.cursor_content.append(verbform)
-            # Vergleicht die Eingabe mit der Lösung
+
             if self.ui.ui_input1.text().strip() == self.cursor_content[0][self.form_number]:
-                self.ui.ui_label.setText("*** RICHTIG ***")
+                self.ui.ui_label.setText(translate("Context", "*** RIGHT ***"))
                 self.ui.ui_right += 1
                 self.right_total = str(int(self.right_total) + 1)
                 self.schreiben()
                 self.percent_verbs = self.percents()
-                # Text aktuallisieren
-                self.ui.ui_right.setText("Richtig: " + str(self.verbs_right))
-                self.ui.ui_percent.setText(str(self.percent_verbs) + "% richtig")
+
+                self.ui.ui_right.setText(translate("Context", "Right: ") + str(self.verbs_right))
+                self.ui.ui_percent.setText(str(self.percent_verbs) + translate("Context", translate("Context", "% right")))
                 if self.form_number < 8:
                     self.ui.ui_label1.setText(self.eforms[self.form_number + 1])
                     self.form_number += 1
@@ -446,11 +448,11 @@ class MainDialog(QtGui.QMainWindow):
                 self.wrong_total = str(int(self.wrong_total) + 1)
                 self.schreiben()
                 self.percent_verbs = self.percents()
-                # Text aktuallisieren
-                self.ui.ui_wrong.setText("Falsch: " + str(self.verbs_wrong))
-                self.ui.ui_percent.setText(str(self.percent_verbs) + "% richtig")
+
+                self.ui.ui_wrong.setText(translate("Context", "Wrong: ") + str(self.verbs_wrong))
+                self.ui.ui_percent.setText(str(self.percent_verbs) + translate("Context", "% right"))
                 self.ui.ui_label.setText(
-                    "Falsch.Richtig wäre gewesen:" + self.eforms[self.form_number] + self.cursor_content[0][self.form_number])
+                    translate("Context", "Wrong! Right would have been: ") + self.eforms[self.form_number] + self.cursor_content[0][self.form_number])
                 if self.form_number < 8:
                     self.ui.ui_label1.setText(self.eforms[self.form_number + 1])
                     self.form_number += 1
@@ -462,25 +464,25 @@ class MainDialog(QtGui.QMainWindow):
 
         elif self.total == 2:
             self.infinitive = []
-            self.ui.ui_right.setText("Richtig: " + str(self.verbs_right))
-            self.ui.ui_wrong.setText("Falsch: " + str(self.verbs_wrong))
+            self.ui.ui_right.setText(translate("Context", "Right: ") + str(self.verbs_right))
+            self.ui.ui_wrong.setText(translate("Context", "Wrong: ") + str(self.verbs_wrong))
             if self.ui.ui_input1.text().strip() == self.cursor_content[self.random][1]:
                 self.verbs_right += 1
                 self.right_total = str(int(self.right_total) + 1)
                 self.schreiben()
                 self.percent_verbs = self.percents()
-                self.ui.ui_right.setText("Richtig: " + str(self.verbs_right))
-                self.ui.ui_percent.setText(str(self.percent_verbs) + "% richtig")
-                self.ui.ui_label.setText("*** RICHTIG ***")
+                self.ui.ui_right.setText(translate("Context", "Right: ") + str(self.verbs_right))
+                self.ui.ui_percent.setText(str(self.percent_verbs) + translate("Context", "% right"))
+                self.ui.ui_label.setText(translate("Context", "*** RIGHT ***"))
             else:
                 self.verbs_wrong += 1
                 self.wrong_total = str(int(self.wrong_total) + 1)
                 self.schreiben()
                 self.percent_verbs = self.percents()
-                self.ui.ui_wrong.setText("Falsch: " + str(self.verbs_wrong))
-                self.ui.ui_percent.setText(str(self.percent_verbs) + "% richtig")
+                self.ui.ui_wrong.setText(translate("Context", "Wrong: ") + str(self.verbs_wrong))
+                self.ui.ui_percent.setText(str(self.percent_verbs) + translate("Context", "% right"))
                 self.ui.ui_label.setText(
-                    "Falsch.Richtig wäre gewesen:" + self.cursor_content[self.random][0] + self.cursor_content[self.random][
+                    translate("Context", "Wrong! Right would have been: ") + self.cursor_content[self.random][0] + self.cursor_content[self.random][
                         1])
 
             for element in self.cursorz:
@@ -498,22 +500,22 @@ class MainDialog(QtGui.QMainWindow):
 
         elif self.total == 3:
             if self.ui.ui_input1.text().strip() == self.query_form_form[self.form_number]:
-                self.ui.ui_label.setText("*** RICHTIG ***")
+                self.ui.ui_label.setText(translate("Context", "*** RIGHT ***"))
                 self.verbs_right += 1
                 self.right_total = str(int(self.right_total) + 1)
                 self.schreiben()
                 self.percent_verbs = self.percents()
-                # Text aktuallisieren
-                self.ui.ui_right.setText("Richtig: " + str(self.verbs_right))
-                self.ui.ui_percent.setText(str(self.percent_verbs) + "% richtig")
+
+                self.ui.ui_right.setText(translate("Context", "Right: ") + str(self.verbs_right))
+                self.ui.ui_percent.setText(str(self.percent_verbs) + translate("Context", "% right"))
             else:
                 self.verbs_wrong += 1
                 self.wrong_total = str(int(self.wrong_total) + 1)
                 self.schreiben()
                 self.percent_verbs = self.percents()
-                self.ui.ui_wrong.setText("Falsch: " + str(self.verbs_wrong))
-                self.ui.ui_percent.setText(str(self.percent_verbs) + "% richtig")
-                self.ui.ui_label.setText("Falsch.Richtig wäre gewesen:" + self.query_form_form[self.form_number])
+                self.ui.ui_wrong.setText(translate("Context", "Wrong: ") + str(self.verbs_wrong))
+                self.ui.ui_percent.setText(str(self.percent_verbs) + translate("Context", "% right"))
+                self.ui.ui_label.setText(translate("Context", "Wrong! Right would have been: ") + self.query_form_form[self.form_number])
             try:
                 self.form_number += 1
                 self.ui.ui_infinitive.setText(self.query_form_inf[self.form_number])
@@ -607,15 +609,15 @@ class MainDialog(QtGui.QMainWindow):
             self.query_form_form.append(element[1])
         try:
             self.ui.ui_infinitive.setText(self.query_form_inf[self.form_number])
-            self.ui.ui_query_type.setText("Verben")
+            self.ui.ui_query_type.setText(translate("Context", "Verbs"))
             self.ui.ui_label1.setText(self.ui.ui_form_type.currentItem().text() + ": ")
             self.ui.ui_query.setEnabled(True)
             self.ui.ui_verbs.setEnabled(False)
-            self.ui.ui_right.setText("Richtig: " + str(self.verbs_right))
-            self.ui.ui_wrong.setText("Falsch: " + str(self.verbs_wrong))
-            self.ui.ui_percent.setText(str(self.percent_verbs) + "% richtig")
+            self.ui.ui_right.setText(translate("Context", "Right: ") + str(self.verbs_right))
+            self.ui.ui_wrong.setText(translate("Context", "Wrong: ") + str(self.verbs_wrong))
+            self.ui.ui_percent.setText(str(self.percent_verbs) + translate("Context", "% right"))
         except IndexError:
-            self.ui.ui_verb_info.setText("Sie haben kein Verb eingeschaltet")
+            self.ui.ui_verb_info.setText(translate("Context", "No verb enabled"))
         else:
             self.ui.ui_verb_info.setText("")
 
@@ -633,9 +635,9 @@ class MainDialog(QtGui.QMainWindow):
         with open(".verbdata.txt", "w") as d:
             self.percent_total = self.total_in_percent()
             d.write(self.right_total + "|" + self.wrong_total)
-        self.ui.ui_right_total.setText("Richtig :" + self.right_total)
-        self.ui.ui_wrong_total.setText("Falsch :" + self.wrong_total)
-        self.ui.ui_percent_total.setText(str(self.percent_total) + "% richtig")
+        self.ui.ui_right_total.setText(translate("Context", "Right: ") + self.right_total)
+        self.ui.ui_wrong_total.setText(translate("Context", "Wrong :") + self.wrong_total)
+        self.ui.ui_percent_total.setText(str(self.percent_total) + translate("Context", "% right"))
 
     def open_verbs_dialog(self):
         vd = VerbsDialog()
