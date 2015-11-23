@@ -1,4 +1,27 @@
-import sys, sqlite3, random, glob
+#!/usr/bin/python3
+
+"""
+(c) 2015 Valentin Pratz <git@valentinpratz.de>
+
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+"""
+
+import sys
+import sqlite3
+import random
+import glob
 from PyQt4 import QtGui, uic
 from PyQt4.QtCore import QTranslator, QLocale
 
@@ -98,8 +121,10 @@ class VerbsDialog(QtGui.QDialog):
         others1 = self.var_names[0]
         cursor = self.con.cursor()
         cursor.execute("SELECT * FROM verb")
-        sql = "INSERT INTO verb VALUES('" + infinitive + "','" + je + "','" + tu + "','" + il + "','" + nous + "','" + vous + "','" + ils + "','" \
-              + participle + "','" + auxiliary_verb + "','" + unit + "','" + book + "','" + enabled + "','" + others + "','" + others1 + "')"
+        sql = "INSERT INTO verb VALUES('" + infinitive + "','" + je + "','" + tu + "','"\
+              + il + "','" + nous + "','" + vous + "','" + ils + "','" \
+              + participle + "','" + auxiliary_verb + "','" + unit + "','"\
+              + book + "','" + enabled + "','" + others + "','" + others1 + "')"
         cursor.execute(sql)
         self.con.commit()
         self.ui.ui_delete_input.setEnabled(True)
