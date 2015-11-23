@@ -1,5 +1,5 @@
 import sys, sqlite3, random, glob
-from PyQt4 import QtGui, uic, QtCore
+from PyQt4 import QtGui, uic
 from PyQt4.QtCore import QTranslator, QLocale
 
 
@@ -140,7 +140,8 @@ class VerbsDialog(QtGui.QDialog):
                         self.ui.ui_info_def.setText(translate("Context", "You can now define the verb"))
                         self.ui.ui_defi.setEnabled(True)
                     else:
-                        self.ui.ui_info_def.setText(translate("Context", "The auxiliary verb has to be avoir or être"))
+                        self.ui.ui_info_def.setText(translate("Context", "The auxiliary verb has to be {} or {}").format(
+                                                              "avoir", u"être"))
                         self.ui.ui_defi.setEnabled(False)
 
     def back_clicked(self):
@@ -332,10 +333,10 @@ class MainDialog(QtGui.QMainWindow):
             self.pairs.append(assignment[0])
             self.pairs.append(assignment[1])
 
-        self.eforms = ["Infinitif: ", "Je: ", "Tu: ", "Il/Elle/On: ", "Nous: ", "Vous: ", "Ils/Elles: ", "Participe: ",
-                        "Hilfsverb: "]
+        self.eforms = [translate("Context", "Infinitive: "), "Je: ", "Tu: ", "Il/Elle/On: ", "Nous: ", "Vous: ", "Ils/Elles: ", "Participe: ",
+                       translate("Context", "Auxiliary verb: ")]
         self.forms = ["Je", "Tu", "Il/Elle/On", "Nous", "Vous", "Ils/Elles", "Participe passé",
-                       "Hilfsverb für participe passé"]
+                      translate("Context", "Auxiliary verb for participe {}").format("passé")]
         # Fill List Object 'formart' with forms
         self.ui.ui_form_type.addItems(self.forms)
         self.ui.ui_form_type.setCurrentItem(self.ui.ui_form_type.item(0))
@@ -425,7 +426,7 @@ class MainDialog(QtGui.QMainWindow):
 
             if self.ui.ui_input1.text().strip() == self.cursor_content[0][self.form_number]:
                 self.ui.ui_label.setText(translate("Context", "*** RIGHT ***"))
-                self.ui.ui_right += 1
+                self.verbs_right += 1
                 self.right_total = str(int(self.right_total) + 1)
                 self.schreiben()
                 self.percent_verbs = self.percents()
@@ -647,8 +648,11 @@ if __name__ == '__main__':
     qt_translator = QTranslator()
     locale = QLocale()
     locale_name = locale.name().lower()[:2]
+    if len(locale_name) < 2:
+        import locale
+        locale_name = locale.getlocale()[0][:2]
     if qt_translator.load("verbtrainer_{}".format(locale_name)):
-        print("Translation could be loaded!")
+        print("Translation loaded!")
     app.installTranslator(qt_translator)
 
     translate = app.translate
