@@ -66,7 +66,7 @@
      </rect>
     </property>
     <property name="title">
-     <string>Verben</string>
+     <string>Verbs</string>
     </property>
     <widget class="QComboBox" name="ui_verbs_list">
      <property name="geometry">
@@ -572,7 +572,7 @@
    </property>
    <widget class="QMenu" name="ui_verbs_menu">
     <property name="title">
-     <string>Verben</string>
+     <string>Verbs</string>
     </property>
     <property name="separatorsCollapsible">
      <bool>false</bool>
@@ -590,7 +590,7 @@
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Verben</string>
+    <string>Verbs</string>
    </property>
   </action>
  </widget>
